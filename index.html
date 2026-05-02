@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -27,14 +28,17 @@
             width: 6px;
             height: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: #2a2a2a;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #5CB8E4;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #8758FF;
         }
@@ -51,6 +55,7 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
             transition: all 0.2s ease;
         }
+
         .header h1 {
             font-weight: 700;
             font-size: 2.3rem;
@@ -61,6 +66,7 @@
             letter-spacing: -0.5px;
             margin-bottom: 8px;
         }
+
         .header p {
             margin: 0;
             font-size: 0.9rem;
@@ -81,18 +87,21 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
             overflow: hidden;
         }
+
         .card:hover {
             transform: translateY(-4px);
             border-color: rgba(92, 184, 228, 0.5);
             box-shadow: 0 20px 35px -8px #00000055;
             background: #252525;
         }
+
         .card-header {
             background: rgba(0, 0, 0, 0.3);
             border-bottom: 2px solid #5CB8E4;
             padding: 1rem 1.5rem;
             font-weight: 600;
         }
+
         .card-title {
             font-weight: 700;
             margin: 0;
@@ -102,6 +111,7 @@
             align-items: center;
             gap: 8px;
         }
+
         .card-title::before {
             content: "▌";
             color: #5CB8E4;
@@ -118,6 +128,7 @@
             border-left: 4px solid #5CB8E4;
             transition: 0.2s;
         }
+
         .metric-label {
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -126,6 +137,7 @@
             color: #9e9e9e;
             margin-bottom: 6px;
         }
+
         .metric-value {
             font-size: 2.6rem;
             font-weight: 800;
@@ -133,6 +145,7 @@
             line-height: 1.1;
             text-shadow: 0 0 5px rgba(92, 184, 228, 0.2);
         }
+
         /* custom progress bars */
         .progress {
             background: #2C2C2C;
@@ -142,15 +155,18 @@
             margin-top: 12px;
             box-shadow: inset 0 1px 3px #00000033;
         }
+
         .progress-bar {
             font-weight: 600;
             font-size: 0rem;
             transition: width 0.4s ease;
         }
+
         .bg-cyan {
             background: linear-gradient(90deg, #5CB8E4, #3b9fd0) !important;
             box-shadow: 0 0 6px #5CB8E4aa;
         }
+
         .bg-purple {
             background: linear-gradient(90deg, #8758FF, #a47eff) !important;
             box-shadow: 0 0 6px #8758FFaa;
@@ -163,6 +179,7 @@
             gap: 14px;
             margin-top: 12px;
         }
+
         .detail-item {
             background: #171717;
             padding: 14px 12px;
@@ -170,6 +187,7 @@
             border-left: 3px solid #5CB8E4;
             transition: all 0.2s;
         }
+
         .detail-label {
             font-size: 0.75rem;
             text-transform: uppercase;
@@ -177,6 +195,7 @@
             letter-spacing: 0.5px;
             margin-bottom: 6px;
         }
+
         .detail-value {
             font-size: 1.55rem;
             font-weight: 700;
@@ -191,6 +210,7 @@
             gap: 12px;
             margin-top: 18px;
         }
+
         .core-box {
             background: #0f0f0f;
             padding: 12px 8px;
@@ -199,16 +219,19 @@
             border-left: 3px solid #5CB8E4;
             transition: 0.2s;
         }
+
         .core-box:hover {
             background: #1a1a2e;
             transform: scale(0.98);
         }
+
         .core-label {
             font-size: 0.7rem;
             font-weight: 500;
             color: #b0b0b0;
             letter-spacing: 0.3px;
         }
+
         .core-value {
             font-size: 1.7rem;
             font-weight: 800;
@@ -223,6 +246,7 @@
             gap: 28px;
             margin-bottom: 32px;
         }
+
         .chart-card {
             background: #1e1e1e;
             border: 1px solid rgba(92, 184, 228, 0.25);
@@ -231,9 +255,11 @@
             transition: all 0.2s;
             backdrop-filter: blur(2px);
         }
+
         .chart-card:hover {
             border-color: #5CB8E480;
         }
+
         canvas {
             max-height: 260px;
             width: 100%;
@@ -245,6 +271,7 @@
             border-collapse: separate;
             border-spacing: 0 6px;
         }
+
         .process-table thead th {
             background: #0f0f0f;
             border: none;
@@ -255,15 +282,18 @@
             font-size: 0.8rem;
             letter-spacing: 0.5px;
         }
+
         .process-table tbody tr {
             background: #181818;
             border-radius: 18px;
             transition: 0.2s;
         }
+
         .process-table tbody tr:hover {
             background: #2a2a2a;
             transform: scale(1.01);
         }
+
         .process-table td {
             border: none;
             padding: 12px 16px;
@@ -271,10 +301,12 @@
             font-weight: 500;
             vertical-align: middle;
         }
+
         .process-table td:first-child {
             border-top-left-radius: 16px;
             border-bottom-left-radius: 16px;
         }
+
         .process-table td:last-child {
             border-top-right-radius: 16px;
             border-bottom-right-radius: 16px;
@@ -285,29 +317,36 @@
             body {
                 padding: 16px 12px;
             }
+
             .metric-value {
                 font-size: 2rem;
             }
+
             .detail-value {
                 font-size: 1.2rem;
             }
+
             .charts-container {
                 grid-template-columns: 1fr;
             }
+
             .card-title {
                 font-size: 1.1rem;
             }
         }
+
         /* small adjustments */
         .text-cyan {
             color: #5CB8E4;
         }
+
         .badge-acc {
             background: #2a2a2a;
             border-radius: 40px;
             padding: 2px 10px;
             font-size: 0.7rem;
         }
+
         footer {
             text-align: center;
             font-size: 0.7rem;
@@ -316,302 +355,316 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="container-fluid px-0 px-md-2">
-    <div class="header">
-        <h1>⚡ NEXUS MONITOR</h1>
-        <p id="update-time" class="badge-acc d-inline-block mt-2">⟳ last updated: —:—:—</p>
-    </div>
-
-    <!-- Live Charts Row -->
-    <div class="charts-container">
-        <div class="chart-card">
-            <canvas id="cpuChart"></canvas>
+    <div class="container-fluid px-0 px-md-2">
+        <div class="header">
+            <h1>⚡ NEXUS MONITOR</h1>
+            <p id="update-time" class="badge-acc d-inline-block mt-2">⟳ last updated: —:—:—</p>
         </div>
-        <div class="chart-card">
-            <canvas id="ramChart"></canvas>
-        </div>
-    </div>
 
-    <!-- Main Metrics Row: CPU, RAM, DISK -->
-    <div class="row g-4">
-        <!-- CPU Card -->
-        <div class="col-lg-4 col-md-6">
-            <div class="card h-100">
-                <div class="card-header">
-                    <h5 class="card-title">PROCESSOR</h5>
-                </div>
-                <div class="card-body">
-                    <div class="metric-box">
-                        <div class="metric-label">📊 overall usage</div>
-                        <div class="metric-value" id="cpu">0%</div>
-                        <div class="progress">
-                            <div class="progress-bar bg-cyan" id="cpu-progress" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    <div class="detail-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">⚡ frequency</div>
-                            <div class="detail-value" id="cpu-freq">0 GHz</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">🔘 physical cores</div>
-                            <div class="detail-value" id="cpu-cores">0</div>
-                        </div>
-                    </div>
-                    <div class="cpu-cores-grid" id="cpu-cores-container"></div>
-                </div>
+        <!-- Live Charts Row -->
+        <div class="charts-container">
+            <div class="chart-card">
+                <canvas id="cpuChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <canvas id="ramChart"></canvas>
             </div>
         </div>
 
-        <!-- RAM Card -->
-        <div class="col-lg-4 col-md-6">
-            <div class="card h-100">
-                <div class="card-header">
-                    <h5 class="card-title">MEMORY (RAM)</h5>
-                </div>
-                <div class="card-body">
-                    <div class="metric-box">
-                        <div class="metric-label">🧠 usage pressure</div>
-                        <div class="metric-value" id="ram">0%</div>
-                        <div class="progress">
-                            <div class="progress-bar bg-purple" id="ram-progress" style="width: 0%"></div>
-                        </div>
+        <!-- Main Metrics Row: CPU, RAM, DISK -->
+        <div class="row g-4">
+            <!-- CPU Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">PROCESSOR</h5>
                     </div>
-                    <div class="detail-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">used</div>
-                            <div class="detail-value" id="ram-used">0 GB</div>
+                    <div class="card-body">
+                        <div class="metric-box">
+                            <div class="metric-label">📊 overall usage</div>
+                            <div class="metric-value" id="cpu">0%</div>
+                            <div class="progress">
+                                <div class="progress-bar bg-cyan" id="cpu-progress" style="width: 0%"></div>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <div class="detail-label">available</div>
-                            <div class="detail-value" id="ram-available">0 GB</div>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <div class="detail-label">⚡ frequency</div>
+                                <div class="detail-value" id="cpu-freq">0 GHz</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">🔘 physical cores</div>
+                                <div class="detail-value" id="cpu-cores">0</div>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <div class="detail-label">total</div>
-                            <div class="detail-value" id="ram-total">0 GB</div>
-                        </div>
+                        <div class="cpu-cores-grid" id="cpu-cores-container"></div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Disk Card -->
-        <div class="col-lg-4 col-md-6">
-            <div class="card h-100">
-                <div class="card-header">
-                    <h5 class="card-title">STORAGE</h5>
-                </div>
-                <div class="card-body">
-                    <div class="metric-box">
-                        <div class="metric-label">💾 disk usage</div>
-                        <div class="metric-value" id="disk">0%</div>
-                        <div class="progress">
-                            <div class="progress-bar bg-cyan" id="disk-progress" style="width: 0%"></div>
-                        </div>
+            <!-- RAM Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">MEMORY (RAM)</h5>
                     </div>
-                    <div class="detail-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">used</div>
-                            <div class="detail-value" id="disk-used">0 GB</div>
+                    <div class="card-body">
+                        <div class="metric-box">
+                            <div class="metric-label">🧠 usage pressure</div>
+                            <div class="metric-value" id="ram">0%</div>
+                            <div class="progress">
+                                <div class="progress-bar bg-purple" id="ram-progress" style="width: 0%"></div>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <div class="detail-label">free</div>
-                            <div class="detail-value" id="disk-free">0 GB</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">total</div>
-                            <div class="detail-value" id="disk-total">0 GB</div>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <div class="detail-label">used</div>
+                                <div class="detail-value" id="ram-used">0 GB</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">available</div>
+                                <div class="detail-value" id="ram-available">0 GB</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">total</div>
+                                <div class="detail-value" id="ram-total">0 GB</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Network Card -->
-    <div class="row mt-3">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">NETWORK TRAFFIC</h5>
-                </div>
-                <div class="card-body">
-                    <div class="detail-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">📤 uploaded</div>
-                            <div class="detail-value" id="net-sent">0 GB</div>
+            <!-- Disk Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">STORAGE</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="metric-box">
+                            <div class="metric-label">💾 disk usage</div>
+                            <div class="metric-value" id="disk">0%</div>
+                            <div class="progress">
+                                <div class="progress-bar bg-cyan" id="disk-progress" style="width: 0%"></div>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <div class="detail-label">📥 downloaded</div>
-                            <div class="detail-value" id="net-recv">0 GB</div>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <div class="detail-label">used</div>
+                                <div class="detail-value" id="disk-used">0 GB</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">free</div>
+                                <div class="detail-value" id="disk-free">0 GB</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">total</div>
+                                <div class="detail-value" id="disk-total">0 GB</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Network Card -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">NETWORK TRAFFIC</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <div class="detail-label">📤 upload speed</div>
+                                <div class="detail-value" id="net-sent-speed">0 MB/s</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">📥 download speed</div>
+                                <div class="detail-value" id="net-recv-speed">0 MB/s</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">📊 sent total</div>
+                                <div class="detail-value" id="net-sent-total">0 GB</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">📊 recv total</div>
+                                <div class="detail-value" id="net-recv-total">0 GB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
-    
-</div>
+    <script>
+        let cpuChart, ramChart;
 
-<script>
-    let cpuChart, ramChart;
-
-    function initCharts() {
-        const chartOptions = {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false },
-                tooltip: { mode: 'index', intersect: false, backgroundColor: '#0a0a0a', titleColor: '#5CB8E4', bodyColor: '#ccc' }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 100,
-                    ticks: { color: '#C0C0C0', callback: (val) => val + '%', stepSize: 20 },
-                    grid: { color: 'rgba(92, 184, 228, 0.12)', lineWidth: 0.8 }
+        function initCharts() {
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { mode: 'index', intersect: false, backgroundColor: '#0a0a0a', titleColor: '#5CB8E4', bodyColor: '#ccc' }
                 },
-                x: {
-                    ticks: { color: '#C0C0C0', maxRotation: 30 },
-                    grid: { display: false }
-                }
-            },
-            elements: { point: { radius: 0, hoverRadius: 4 }, line: { borderWidth: 2.5 } }
-        };
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { color: '#C0C0C0', callback: (val) => val + '%', stepSize: 20 },
+                        grid: { color: 'rgba(92, 184, 228, 0.12)', lineWidth: 0.8 }
+                    },
+                    x: {
+                        ticks: { color: '#C0C0C0', maxRotation: 30 },
+                        grid: { display: false }
+                    }
+                },
+                elements: { point: { radius: 0, hoverRadius: 4 }, line: { borderWidth: 2.5 } }
+            };
 
-        cpuChart = new Chart(document.getElementById('cpuChart'), {
-            type: 'line',
-            data: {
-                labels: Array.from({ length: 60 }, (_, i) => i),
-                datasets: [{
-                    label: 'CPU Usage %',
-                    data: Array(60).fill(0),
-                    borderColor: '#5CB8E4',
-                    backgroundColor: 'rgba(92, 184, 228, 0.08)',
-                    borderWidth: 2.8,
-                    tension: 0.35,
-                    fill: true,
-                    pointRadius: 0,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: '#5CB8E4'
-                }]
-            },
-            options: chartOptions
-        });
+            cpuChart = new Chart(document.getElementById('cpuChart'), {
+                type: 'line',
+                data: {
+                    labels: Array.from({ length: 60 }, (_, i) => i),
+                    datasets: [{
+                        label: 'CPU Usage %',
+                        data: Array(60).fill(0),
+                        borderColor: '#5CB8E4',
+                        backgroundColor: 'rgba(92, 184, 228, 0.08)',
+                        borderWidth: 2.8,
+                        tension: 0.35,
+                        fill: true,
+                        pointRadius: 0,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: '#5CB8E4'
+                    }]
+                },
+                options: chartOptions
+            });
 
-        ramChart = new Chart(document.getElementById('ramChart'), {
-            type: 'line',
-            data: {
-                labels: Array.from({ length: 60 }, (_, i) => i),
-                datasets: [{
-                    label: 'RAM Usage %',
-                    data: Array(60).fill(0),
-                    borderColor: '#8758FF',
-                    backgroundColor: 'rgba(135, 88, 255, 0.08)',
-                    borderWidth: 2.8,
-                    tension: 0.35,
-                    fill: true,
-                    pointRadius: 0,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: '#8758FF'
-                }]
-            },
-            options: chartOptions
-        });
-    }
+            ramChart = new Chart(document.getElementById('ramChart'), {
+                type: 'line',
+                data: {
+                    labels: Array.from({ length: 60 }, (_, i) => i),
+                    datasets: [{
+                        label: 'RAM Usage %',
+                        data: Array(60).fill(0),
+                        borderColor: '#8758FF',
+                        backgroundColor: 'rgba(135, 88, 255, 0.08)',
+                        borderWidth: 2.8,
+                        tension: 0.35,
+                        fill: true,
+                        pointRadius: 0,
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: '#8758FF'
+                    }]
+                },
+                options: chartOptions
+            });
+        }
 
-    function updateMetrics(data) {
-        // timestamp display
-        const now = new Date();
-        document.getElementById('update-time').innerHTML = `⟳ last updated: ${now.toLocaleTimeString()}`;
+        function updateMetrics(data) {
+            // timestamp display
+            const now = new Date();
+            document.getElementById('update-time').innerHTML = `⟳ last updated: ${now.toLocaleTimeString()}`;
 
-        // CPU
-        document.getElementById('cpu').innerHTML = data.cpu + '%';
-        document.getElementById('cpu-progress').style.width = data.cpu + '%';
-        document.getElementById('cpu-freq').innerHTML = data.cpu_freq + ' GHz';
-        document.getElementById('cpu-cores').innerHTML = data.cpu_cores;
+            // CPU
+            document.getElementById('cpu').innerHTML = data.cpu + '%';
+            document.getElementById('cpu-progress').style.width = data.cpu + '%';
+            document.getElementById('cpu-freq').innerHTML = data.cpu_freq + ' GHz';
+            document.getElementById('cpu-cores').innerHTML = data.cpu_cores;
 
-        // per-core rendering
-        const coresContainer = document.getElementById('cpu-cores-container');
-        if (data.cpu_per_core && data.cpu_per_core.length) {
-            coresContainer.innerHTML = data.cpu_per_core.map((core, i) => `
+            // per-core rendering
+            const coresContainer = document.getElementById('cpu-cores-container');
+            if (data.cpu_per_core && data.cpu_per_core.length) {
+                coresContainer.innerHTML = data.cpu_per_core.map((core, i) => `
                 <div class="core-box">
                     <div class="core-label">CORE ${i}</div>
                     <div class="core-value">${core}%</div>
                 </div>
             `).join('');
-        } else {
-            coresContainer.innerHTML = '<div class="text-muted text-center small">core data streaming</div>';
+            } else {
+                coresContainer.innerHTML = '<div class="text-muted text-center small">core data streaming</div>';
+            }
+
+            // RAM
+            document.getElementById('ram').innerHTML = data.ram + '%';
+            document.getElementById('ram-progress').style.width = data.ram + '%';
+            document.getElementById('ram-used').innerHTML = data.ram_used + ' GB';
+            document.getElementById('ram-available').innerHTML = data.ram_available + ' GB';
+            document.getElementById('ram-total').innerHTML = data.ram_total + ' GB';
+
+            // Disk
+            document.getElementById('disk').innerHTML = data.disk + '%';
+            document.getElementById('disk-progress').style.width = data.disk + '%';
+            document.getElementById('disk-used').innerHTML = data.disk_used + ' GB';
+            document.getElementById('disk-free').innerHTML = data.disk_free + ' GB';
+            document.getElementById('disk-total').innerHTML = data.disk_total + ' GB';
+
+            // Network
+            if (data.net_sent_speed !== undefined) document.getElementById('net-sent-speed').innerHTML = data.net_sent_speed + ' MB/s';
+            if (data.net_recv_speed !== undefined) document.getElementById('net-recv-speed').innerHTML = data.net_recv_speed + ' MB/s';
+            if (data.net_sent_total !== undefined) document.getElementById('net-sent-total').innerHTML = data.net_sent_total + ' GB';
+            if (data.net_recv_total !== undefined) document.getElementById('net-recv-total').innerHTML = data.net_recv_total + ' GB';
+
+            // Update charts (sliding window)
+            if (cpuChart && data.history && data.history.cpu) {
+                cpuChart.data.datasets[0].data = data.history.cpu;
+                cpuChart.update('none');
+            }
+            if (ramChart && data.history && data.history.ram) {
+                ramChart.data.datasets[0].data = data.history.ram;
+                ramChart.update('none');
+            }
+
         }
 
-        // RAM
-        document.getElementById('ram').innerHTML = data.ram + '%';
-        document.getElementById('ram-progress').style.width = data.ram + '%';
-        document.getElementById('ram-used').innerHTML = data.ram_used + ' GB';
-        document.getElementById('ram-available').innerHTML = data.ram_available + ' GB';
-        document.getElementById('ram-total').innerHTML = data.ram_total + ' GB';
-
-        // Disk
-        document.getElementById('disk').innerHTML = data.disk + '%';
-        document.getElementById('disk-progress').style.width = data.disk + '%';
-        document.getElementById('disk-used').innerHTML = data.disk_used + ' GB';
-        document.getElementById('disk-free').innerHTML = data.disk_free + ' GB';
-        document.getElementById('disk-total').innerHTML = data.disk_total + ' GB';
-
-        // Network
-        document.getElementById('net-sent').innerHTML = data.net_sent + ' GB';
-        document.getElementById('net-recv').innerHTML = data.net_recv + ' GB';
-
-        // Update charts (sliding window)
-        if (cpuChart && data.history && data.history.cpu) {
-            cpuChart.data.datasets[0].data = data.history.cpu;
-            cpuChart.update('none');
-        }
-        if (ramChart && data.history && data.history.ram) {
-            ramChart.data.datasets[0].data = data.history.ram;
-            ramChart.update('none');
+        // simple XSS protection
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function (m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
         }
 
-    }
+        // SSE connection with reconnection resilience
+        let eventSource = null;
 
-    // simple XSS protection
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
+        function connectSSE() {
+            if (eventSource) eventSource.close();
+            eventSource = new EventSource("/metrics");
+            eventSource.onmessage = function (event) {
+                try {
+                    const data = JSON.parse(event.data);
+                    updateMetrics(data);
+                } catch (e) {
+                    console.error("error updating metrics:", e);
+                }
+            };
+            eventSource.onerror = function (event) {
+                console.error('SSE connection lost');
+                eventSource.close();
+                setTimeout(() => connectSSE(), 3000);
+            };
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initCharts();
+            connectSSE();
+            window.clearTimeoutOnLoad = initialTimeout;
         });
-    }
-
-    // SSE connection with reconnection resilience
-    let eventSource = null;
-
-    function connectSSE() {
-        if (eventSource) eventSource.close();
-        eventSource = new EventSource("/metrics");
-        eventSource.onmessage = function(event) {
-            try {
-                const data = JSON.parse(event.data);
-                updateMetrics(data);
-            } catch(e) { console.warn("parse error", e); }
-        };
-        eventSource.onerror = function(event) {
-            console.error('SSE connection lost, reconnecting in 2s...');
-            eventSource.close();
-            setTimeout(connectSSE, 2000);
-        };
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        initCharts();
-        connectSSE();
-        window.clearTimeoutOnLoad = initialTimeout;
-    });
-</script>
+    </script>
 </body>
+
 </html>
