@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  mini-monitor:
+    build: .
+    container_name: mini-monitor
+    ports:
+      - "7000:7000"
+    restart: unless-stopped
+    pid: host
+    volumes:
+      - /proc:/proc:ro
+      - /sys:/sys:ro

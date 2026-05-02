@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini PC Monitor</title>
+</head>
+<body>
+  <h1>System Monitor</h1>
+  <p>CPU: <span id="cpu">0</span>%</p>
+  <p>RAM: <span id="ram">0</span>%</p>
+
+  <script>
+    const source = new EventSource("/metrics");
+
+    source.onmessage = function(event) {
+      const data = JSON.parse(event.data);
+      document.getElementById("cpu").innerText = data.cpu;
+      document.getElementById("ram").innerText = data.ram;
+    };
+  </script>
+</body>
+</html>
