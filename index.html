@@ -453,29 +453,7 @@
         </div>
     </div>
 
-    <!-- Top Processes Card -->
-    <div class="row mt-4">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">🔥 TOP CONSUMERS</h5>
-                </div>
-                <div class="card-body p-0 p-md-3">
-                    <div class="table-responsive">
-                        <table class="table process-table">
-                            <thead>
-                                <tr><th>Process name</th><th style="text-align: right;">CPU %</th><th style="text-align: right;">MEMORY %</th></tr>
-                            </thead>
-                            <tbody id="processes-list">
-                                <tr><td colspan="3" class="text-center text-secondary">🔄 fetching live data ...</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>🔒 live telemetry • cyan core vision</footer>
+    
 </div>
 
 <script>
@@ -597,19 +575,6 @@
             ramChart.update('none');
         }
 
-        // Top processes table (beautifully formatted)
-        const processListEl = document.getElementById('processes-list');
-        if (data.top_processes && data.top_processes.length > 0) {
-            processListEl.innerHTML = data.top_processes.map(proc => `
-                <tr>
-                    <td><span class="status-indicator" style="background: #5CB8E4; display: inline-block; width: 8px; height: 8px; border-radius: 10px; margin-right: 10px;"></span>${escapeHtml(proc.name)}</td>
-                    <td style="text-align: right; font-weight: 600; color: #5CB8E4;">${proc.cpu}%</td>
-                    <td style="text-align: right; font-weight: 600; color: #b77eff;">${proc.memory}%</td>
-                </tr>
-            `).join('');
-        } else {
-            processListEl.innerHTML = '<tr><td colspan="3" class="text-center text-secondary">✨ no process data available</td></tr>';
-        }
     }
 
     // simple XSS protection
@@ -645,28 +610,6 @@
     window.addEventListener('DOMContentLoaded', () => {
         initCharts();
         connectSSE();
-
-        // fallback simulation if backend not present? keep as expected behavior.
-        // Provide a mock data generator only for design showcase (will not interfere if real backend works)
-        // but sse will override. This ensures UI never stays empty if backend missing.
-        // Actually for demo page we can optional fill an initial placebo.
-        // But to respect original spec, we just rely on backend. Add temporary timeout to show placeholder only if no data after 2 sec
-        let initialTimeout = setTimeout(() => {
-            // only if no metrics appeared and table empty? but fine, will not replace existing.
-            const cpuValue = document.getElementById('cpu').innerText;
-            if (cpuValue === '0%') {
-                // Very small mock to avoid blank look for standalone preview (optional helper)
-                const mockFallback = {
-                    cpu: 12, cpu_freq: "2.4", cpu_cores: 8, ram: 34, ram_used: "4.2", ram_available: "8.1", ram_total: "12.3",
-                    disk: 45, disk_used: "112", disk_free: "138", disk_total: "250",
-                    net_sent: "0.24", net_recv: "1.32",
-                    cpu_per_core: [15, 22, 8, 31, 27, 12, 9, 18],
-                    top_processes: [{ name: "system_daemon", cpu: 18, memory: 12 }, { name: "browser", cpu: 42, memory: 28 }],
-                    history: { cpu: Array(60).fill(0).map(() => Math.floor(Math.random() * 35)), ram: Array(60).fill(0).map(() => 20 + Math.random() * 40) }
-                };
-                if (document.getElementById('cpu').innerText === '0%') updateMetrics(mockFallback);
-            }
-        }, 1800);
         window.clearTimeoutOnLoad = initialTimeout;
     });
 </script>
