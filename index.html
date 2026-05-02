@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,9 +173,17 @@
             margin-right: 8px;
         }
 
-        .status-good { background: #28a745; }
-        .status-warning { background: #ffc107; }
-        .status-danger { background: #dc3545; }
+        .status-good {
+            background: #28a745;
+        }
+
+        .status-warning {
+            background: #ffc107;
+        }
+
+        .status-danger {
+            background: #dc3545;
+        }
 
         .detail-grid {
             display: grid;
@@ -217,6 +226,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>⚙️ System Monitor</h1>
@@ -369,7 +379,9 @@
                                     </tr>
                                 </thead>
                                 <tbody id="processes-list">
-                                    <tr><td colspan="3" class="text-center">Loading...</td></tr>
+                                    <tr>
+                                        <td colspan="3" class="text-center">Loading...</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -397,7 +409,7 @@
                         max: 100,
                         ticks: {
                             color: 'rgba(255, 255, 255, 0.7)',
-                            callback: function(value) {
+                            callback: function (value) {
                                 return value + '%';
                             }
                         },
@@ -419,7 +431,7 @@
             cpuChart = new Chart(document.getElementById('cpuChart'), {
                 type: 'line',
                 data: {
-                    labels: Array.from({length: 60}, (_, i) => i),
+                    labels: Array.from({ length: 60 }, (_, i) => i),
                     datasets: [{
                         label: 'CPU Usage',
                         data: Array(60).fill(0),
@@ -438,7 +450,7 @@
             ramChart = new Chart(document.getElementById('ramChart'), {
                 type: 'line',
                 data: {
-                    labels: Array.from({length: 60}, (_, i) => i),
+                    labels: Array.from({ length: 60 }, (_, i) => i),
                     datasets: [{
                         label: 'RAM Usage',
                         data: Array(60).fill(0),
@@ -458,7 +470,7 @@
         function updateMetrics(data) {
             // Update time
             const now = new Date();
-            document.getElementById('update-time').textContent = 
+            document.getElementById('update-time').textContent =
                 'Last updated: ' + now.toLocaleTimeString();
 
             // CPU
@@ -520,15 +532,16 @@
             initCharts();
             const source = new EventSource("/metrics");
 
-            source.onmessage = function(event) {
+            source.onmessage = function (event) {
                 const data = JSON.parse(event.data);
                 updateMetrics(data);
             };
 
-            source.onerror = function(event) {
+            source.onerror = function (event) {
                 console.error('SSE error:', event);
             };
         });
     </script>
 </body>
+
 </html>
