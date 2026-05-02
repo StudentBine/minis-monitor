@@ -19,19 +19,24 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
-        pass  # Suppress log messages
+        print(f"[{self.client_address[0]}] {format % args}")
 
     def do_GET(self):
+        print(f"GET request: {self.path}")
         try:
             if self.path == "/":
+                print(f"Serving HTML from: {os.path.join(SCRIPT_DIR, 'index.html')}")
                 self.send_response(200)
-                self.send_header("Content-type", "text/html")
+                self.send_header("Content-type", "text/html; charset=utf-8")
                 self.end_headers()
                 html_path = os.path.join(SCRIPT_DIR, "index.html")
                 with open(html_path, "rb") as f:
-                    self.wfile.write(f.read())
+                    data = f.read()
+                    print(f"Sent {len(data)} bytes")
+                    self.wfile.write(data)
 
             elif self.path == "/metrics":
+                print("Starting metrics stream")
                 self.send_response(200)
                 self.send_header("Content-type", "text/event-stream")
                 self.send_header("Cache-Control", "no-cache")
@@ -100,15 +105,20 @@ class Handler(BaseHTTPRequestHandler):
                         time.sleep(1)
             else:
                 self.send_response(404)
+                self.send_header("Content-type", "text/plain")
                 self.end_headers()
+                self.wfile.write(b"404 Not Found")
         except Exception as e:
             print(f"Handler Error: {e}")
             try:
                 self.send_response(500)
+                self.send_header("Content-type", "text/plain")
                 self.end_headers()
+                self.wfile.write(b"500 Internal Server Error")
             except:
                 pass
 
-server = HTTPServer(("0.0.0.0", 7000), Handler)
-print("Running on http://0.0.0.0:7000")
-server.serve_forever()
+if __name__ == "__main__":
+    server = HTTPServer(("0.0.0.0", 7000), Handler)
+    print("Running on http://0.0.0.0:7000")
+    server.serve_forever()
